@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses</title>
+    <link rel="stylesheet" href="{% static '/stylesheets/mycoursesMobile.css' %}">
+    <link rel="stylesheet" href="{% static '/stylesheets/sameForAll.css' %}">
+    <script src="{% static '/scripts/myCourses.js' %}"></script>
+    <script src="{% static '/scripts/sameForAll.js' %}"></script>
+</head>
+
+<body>
+    <div id="myCourse">
+        <div id="allMine">
+            <div id="mineCont1">
+                <!-- <img id="sideBar" src="/Images/sideBar.png"> -->
+                <label>My Courses</label>
+                <a onclick="opacDiv()" href="{% url 'homie' %}"> <img src="{%static '/Images/cross.png' %}"> </a>
+            </div>
+            <div id="mineCont2">
+                <div id="mineChild1" class="mineClass1">
+                    <p>Recent Courses</p>
+                    <div id="kapdiv1" class="diviDivs"></div>
+                </div>
+                <div id="mineChild2" class="mineClass1">
+                    <p>Enrolled Courses</p>
+                    <div id="kapdiv2" class="diviDivs"></div>
+                </div>
+            </div>
+        </div>
+        <!-- opacityDiv -->
+        <div id="opacDiv">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

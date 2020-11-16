@@ -1,0 +1,114 @@
+#mainCont {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#navBar {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(192, 187, 187);
+  display: flex;
+  position: relative;
+}
+
+#sideBar {
+  min-width: 40px;
+  width: 15%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sideBar img {
+  width: 30px;
+  height: 30px;
+}
+
+#close {
+  min-width: 40px;
+  width: 15%;
+  height: 60px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+}
+
+#close img {
+  width: 30px;
+  height: 30px;
+}
+
+#edit {
+  /* edit icon sizing */
+  min-width: 20px;
+  width: 15px;
+  height: 20px;
+}
+
+#heading {
+  /* profile heading sizing */
+  text-align: center;
+  font-size: 24px;
+  padding: 16px 18px;
+}
+
+.image-cropper {
+  width: 100%;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.profile-pic {
+  /* display: inline; */
+  /* margin: auto; */
+  /* margin-left: -30%; */
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.rectangle {
+  height: 210px;
+  width: 100%;
+  background-color: #EDDD2C;
+  border-radius: 10px;
+  color: rgb(247, 247, 247);
+  text-align: center;
+  line-height: 0.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: #EDDD2C;
+  color: rgb(247, 247, 247);
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.size {
+  /*  font size for user id&mail tags  */
+  text-align: center;
+  font-size: 20px;
+}
+
+#opacDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: white;
+  display: none;
+}

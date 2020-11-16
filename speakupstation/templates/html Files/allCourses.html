@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses</title>
+    <link rel="stylesheet" href="{% static '/stylesheets/allCoursesMobile.css' %}">
+    <link rel="stylesheet" href="{% static '/stylesheets/sameForAll.css' %}">
+    <script src="{% static '/scripts/allCourses.js' %}"></script>
+    <script src="{% static '/scripts/sameForAll.js' %}"></script>
+</head>
+
+<body>
+    <div id="allCourse">
+        <div id="allCMine">
+            <div id="allmineCont1">
+                <!-- <img id="sideBar" src="/Images/sideBar.png"> -->
+                <label>All Courses</label>
+                <a onclick="opacDiv()" href="{% url 'homie' %}"> <img src="{% static '/Images/cross.png' %}"> </a>
+            </div>
+            <div id="allmineCont2">
+                <div id="searchInput">
+                    <img id="twoDiffIcons" onclick="searchOrClear()" src="{% static '/Images/b.png' %}">
+                    <input id="searchText" onkeyup="chngImg()" type="text">
+                </div>
+                <div id="allTheCourses"></div>
+            </div>
+        </div>
+        <!-- opacityDiv -->
+        <div id="opacDiv">
+
+        </div>
+    </div>
+
+</body>
+
+</html>

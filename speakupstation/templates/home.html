@@ -1,0 +1,14 @@
+<body>
+    <h1>hello</h1>
+    {% if user.is_authenticated %}
+    logout here <a href="{% url 'logout' %}">logout</a>
+
+    {% else %}
+
+    register here <a href="{% url 'signup' %}">Sign Up</a>
+
+    login here <a href="{% url 'login' %}">login</a>
+    {% endif %}
+
+
+</body>

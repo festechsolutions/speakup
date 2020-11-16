@@ -1,0 +1,292 @@
+#mainCont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: wheat; */
+}
+
+/* maincont1-------------------------------------------------------------------------------------------------------------------------*/
+
+#mainCont1 {
+    height: 200px;
+    width: 98%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+/* conta1-------------------------------------------------------------------------------------------------------------------------*/
+
+#conta1 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+
+#conta1 img {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+#conta1 p {
+    color: black;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    padding-left: 18px;
+    padding-top: 6px;
+    margin: 0;
+}
+
+/* conta2-------------------------------------------------------------------------------------------------------------------------*/
+
+#conta2 {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#childa1 {
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+}
+
+#childa1 p {
+    margin: 0;
+}
+
+#childa2 {
+    width: 100%;
+    height: 90px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#childa2 span {
+    height: 70px;
+    border: 1px solid rgb(36, 36, 36);
+    /* width: 1px; */
+}
+
+#childa3 {
+    width: 100px;
+    height: 25px;
+    border: 1px solid grey;
+    background-color: rgb(70, 66, 66);
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#childa3 p {
+    margin: auto;
+}
+
+/* hr ------------------------------------------------------------------------------------------------------------------------- */
+
+hr {
+    width: 100vw;
+    border: 1px solid;
+}
+
+/* maincont2 -------------------------------------------------------------------------------------------------------------------------*/
+
+#mainCont2 {
+    height: 64vh;
+    max-height: 495px;
+    width: 98%;
+    background-color: rgb(255, 255, 255); 
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jqtc1 {
+    min-height: 25px;
+    width: 100px;
+    margin: 30px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.jqtc1 p {
+    margin: 0;
+}
+
+#childb2 {
+    width: 100%;
+    min-height: 120px;
+    height: 100%;
+    overflow-y: scroll;
+    /* background-color:  rgb(41, 39, 39);  */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* tracker */
+
+#MainChildDad {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 5;
+    display: none;
+}
+
+#childb3Dad {
+    width: 100%;
+    background-color: white;
+    height: 0px;
+    transition: all 0.4s;
+}
+
+#childb3 {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(40, 64, 136);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* description */
+
+#MainChildDad1 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    display: none;
+}
+
+#childb3Dad1 {
+    width: 100%;
+    background-color: rgb(207, 46, 46);
+    height: 0px;
+    transition: all 0.4s;
+}
+
+#childb31 {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* decendants1 ------------------------------------------------------------------------------------------------------------------------- */
+
+#descendants1 {
+    background-color: salmon;
+    min-height: 150px;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nan4d {
+    width: 80px;
+    min-height: 24px;
+}
+
+#percentileT {
+    width: 130px;
+    min-height: 130px;
+    border-radius: 100%;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #percentileT p {}
+
+.lkpne3 {
+    /* margin-left: 15px; */
+/* } */ 
+
+#minsLeft {
+    text-align: center;
+    margin-top: 13px;
+    margin-left: 0;
+    padding-right: 18px;
+}
+
+/* decendants2 ------------------------------------------------------------------------------------------------------------------------- */
+
+#descendants2 {
+    background-color: rgb(245, 87, 70);
+    min-height: 150px;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.nftre {
+    border: none;
+    background-color: #d6d6d6;
+}
+
+/* discription */
+
+#discription {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+    display: none;
+}
+.btn{   /* lesson button */
+     /* background-color:  rgb(22, 138, 153);  */
+    color: rgb(247, 247, 247) ;
+     padding: 0px 80px;  
+    font-size: 20px;
+     width: 70%;
+    height: 12%; 
+    border-radius: 25px; 
+    margin: auto;
+    outline: none;
+    /* border: 1px solid rgb(197, 33, 33); */
+    background-image: linear-gradient(to left, rgb(192, 120, 120), rgb(74, 91, 187));
+    
+  } 
+

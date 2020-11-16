@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settings</title>
+    <link rel="stylesheet" href="{% static '/stylesheets/settingsMobile.css'%}">
+    <link rel="stylesheet" href="{% static '/stylesheets/sameForAll.css'%}">
+    <script src="{% static '/scripts/settings.js' %}"></script>
+    <script src="{% static '/scripts/sameForAll.js' %}"></script>
+</head>
+
+<body>
+    <div id="neededOne">
+        <div id="reqSettings">
+            <div id="settings">
+                <div id="settingsCont1">
+                    <label>Settings</label>
+                    <a onclick="opacDiv()" href="{% url 'homie' %}"> <img src="{% static '/Images/cross.png' %}"> </a>
+                </div>
+                <div id="settingsCont2">
+                    <div class="setOptions" id="setOption1">
+                        <p>Notifications</p>
+                    </div>
+                    <div class="setOptions" id="setOption2">
+                        <p>About</p>
+                    </div>
+                    <div class="setOptions" id="setOption3">
+                        <p>Help</p>
+                    </div>
+                    <div class="setOptions" id="setOption4">
+                        <p>Theme</p>
+                    </div>
+                    <div class="setOptions" id="setOption5">
+                        <p>Log Out</p>
+                    </div>
+                    <img src="{% static '/Images/app icon.jpeg' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- opacityDiv -->
+    <div id="opacDiv">
+
+    </div>
+</body>
+
+</html>

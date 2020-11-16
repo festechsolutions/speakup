@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+  <title>profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static '/stylesheets/profileMobile.css' %}">
+  <link rel="stylesheet" href="{% static '/stylesheets/sameForAll.css' %}">
+  <script src="{% static '/scripts/profile.js' %}"></script>
+  <script src="{% static '/scripts/sameForAll.js' %}"></script>
+</head>
+
+<body>
+  <div id="mainCont">
+    <!-- Nav bar starts here -->
+    <div id="navBar">
+      <div id="sideBar">
+        <img src="{% static '/Images/sidebar.png' %}">
+      </div>
+      <div id="heading">Profile</div>
+      <div id="close">
+        <a onclick="opacDiv()" href="{% url 'homie' %}"> <img src="{% static '/Images/cross.png' %}"> </a>
+      </div>
+    </div>
+    <br />
+    <div class="rectangle">
+      <!-- rectangle box around img -->
+
+      <div class="image-cropper">
+        <img src="{% static '/Images/prof1 (1).png' %}" alt="avatar" class="profile-pic">
+        <img src="{% static '/Images/penIcon.jpeg' %}" id="edit"> <!-- img -->
+
+        <div class="size">
+          <h2>Username <img src="{% static '/Images/penIcon.jpeg' %}" id="edit"></h2>
+        </div>
+        <div class="size">username@gmail.com</div>
+      </div>
+    </div> <!-- rectangle box around img  End here -->
+
+    <br />
+    <button class="btn">Edit</button> <!-- button -->
+
+    <!-- opacityDiv -->
+    <div id="opacDiv">
+
+    </div>
+  </div>
+</body>
+
+</html>

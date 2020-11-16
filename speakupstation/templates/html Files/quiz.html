@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/quiz.css">
+  <script src="/scripts/quiz.js"></script>
+  <title>Quiz</title>
+</head>
+
+<body>
+  <div id="navBar">
+    <div>
+      <p id="Course_title">English to Kannada</p> <!--  course title  -->
+    </div>
+
+    <div id="close">
+      <img src="/Images/cross.png"> <!--  close  -->
+    </div>
+  </div>
+  <hr />
+  <div class="center">
+    <p><b>Quiz-1</b></p> <!--  quiz -->
+  </div>
+  <div class="border">
+    <p>hello</p>
+    <button class="speakerbutton"><img src="/Images/speaker.png" class="speaker"></button>
+
+  </div>
+  <br />
+  <div>
+    <img src="/Images/app icon.jpeg" class="gifOrImg">
+  </div>
+  <br />
+  <div>
+    <div class="container">
+      <input onclick="myFunc('cont1')" type="radio" checked="checked" name="radio">
+      <label id="cont1">One</label>
+
+      <!-- <span  class="checkmark"></span> -->
+    </div>
+
+    <div class="container">
+      <input onclick="myFunc('cont2')" type="radio" name="radio">
+      <label id="cont2">Two</label>
+
+      <!-- <span  class="checkmark"></span> -->
+    </div>
+
+    <div class="container">
+      <input onclick="myFunc('cont3')" type="radio" name="radio">
+      <label id="cont3">Three</label>
+
+      <!-- <span  class="checkmark"></span> -->
+    </div>
+
+    <div class="container">
+      <input onclick="myFunc('cont4')" type="radio" name="radio">
+      <label id="cont4">Four</label>
+
+      <!-- <span  class="checkmark"></span> -->
+    </div>
+  </div>
+  <br />
+  <div id="myModal1" class="modal">
+
+    <!-- Modal content for right answer-->
+    <div class="modal-content" id="right">
+      <img src="/Images/right.jpeg" class="modalicons">
+      <p id="hurray">Hurayyy...correct!</p>
+        <button class="next">Next</button>
+    </div>
+  </div> 
+  <div id="myModal2" class="modal">
+
+    <!-- Modal content for wrong answer-->
+    <div class="modal-content" id="wrong">
+      <img src="/Images/wrong.jpeg" class="modalicons">
+      <p id="hurray">o.O Wrong answer!</p> <!-- retry redoshould be added here -->
+      <button class="back">Back</button>
+      <button class="retry">Retry</button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

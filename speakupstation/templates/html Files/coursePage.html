@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+    <link rel="stylesheet" href="{% static '/stylesheets/coursePageMobile.css' %}">
+    <link rel="stylesheet" href="{% static '/stylesheets/sameForAll.css' %}">
+    <script src="{% static '/scripts/sameForAll.js' %}"></script>
+</head>
+
+<body>
+    <div id="mainCont">
+        <div id="mainConts">
+            <div id="mainCont1">
+                <div id="conta1">
+                    <p>Course</p>
+                    <a onclick="opacDiv()" href="{% url 'homie' %} "> <img src="{% static '/Images/cross.png' %}">
+                    </a>
+                </div>
+                <div id="conta2">
+                    <div id="childa1">
+                        {% for boom1 in fetcher3 %}
+                        {% for boom2 in fetcher1 %}
+                        {% if boom1.id == boom2.id %}
+                        <p>{{boom1.title}}</p>
+                        {% endif %}
+                        {% endfor %}
+                        {% endfor %}
+                    </div>
+                    <div id="childa2">
+                        <div onclick="showDiscription()" id="childb1" class="jqtc1">
+                            <p>Description</p>
+                        </div>
+                        <span></span> <!-- devider -->
+                        <div onclick="showTracker()" class="jqtc1 nan4d ">
+                            <p>Tracker</p>
+                        </div>
+                    </div>
+                    <a href="{% url 'lesson' %}">
+                        <div id="childa3">
+                            <p>Start</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div id="mainCont2">
+
+                <div id="childb2">
+
+                    {% for a1 in fetcher2 %}
+                    <h1>{{ a1.title }}</h1>
+                    {% for a in fetcher1 %}
+                    {% if a.section_id == a1.id %}
+                    <button class="btn"><p>{{a.title}}</p></button>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- childb3Dad -->
+        <div id="MainChildDad">
+            <!-- for Tracking -->
+            <div id="childb3Dad">
+                <div id="childb3">
+                    <div id="descendants1">
+
+                        <div id="percentileT">
+                            <p>%</p>
+                        </div>
+                        <p id="minsLeft">" " mins left</p>
+                    </div>
+                    <div id="descendants2">
+                        <!-- total no of lessons -->
+                        <div class="jqtc1 nftre">
+                            <p>"" lessons</p>
+                        </div>
+                        <!-- completed -->
+                        <div class="jqtc1 nftre">
+                            <p>"" Completed</p>
+                        </div>
+                        <!-- animation -->
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- for description -->
+        <div id="MainChildDad1">
+            <div id="childb3Dad1">
+                <div id="childb31">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- opacityDiv -->
+        <div id="opacDiv">
+
+        </div>
+
+        <!-- full discription -->
+        <div onclick="checkOut(event)" id="discription"></div>
+    </div>
+</body>
+<script src="{% static '/scripts/coursePage.js' %}"></script>
+
+</html>

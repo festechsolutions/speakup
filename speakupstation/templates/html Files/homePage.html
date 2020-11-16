@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static '/stylesheets/homePageMobile1.css' %}">
+    <link rel="stylesheet" href="{% static '/stylesheets/sameForAll.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="{% static '/scripts/homePage1.js' %}"></script>
+    <script src="{% static '/scripts/sameForAll.js' %}"></script>
+</head>
+
+<body>
+    <div id="sbkaPapa">
+        <!-- Nav bar starts here -->
+        <div id="navBar">
+            <div id="sideButt">
+                <img onclick="checkit()" src="{% static '/Images/sideBar.png' %}">
+            </div>
+            <div id="searchInput">
+                <img id="twoDiffIcons" onclick="searchOrClear()" src="{% static '/Images/b.png' %}">
+                <input id="searchText" onkeyup="chngImg()" type="text">
+            </div>
+            <div id="profile">
+                <a href="{% url 'profile' %}">
+                    <img src=" {% static '/Images/prof1 (1).png' %}">
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Maincont starts here -->
+        <div id="mainCont">
+            <div id="banner">
+                <h1>Speak Up Station</h1>
+            </div>
+            <div id="courses">
+                <div class="coursesCont">
+                    <p>Upcoming Courses</p>
+                    <div class="act1" id="UpCourse">
+                        <a>
+                            <img src="{% static '/Images/arrow.png' %}">
+                        </a>
+                    </div>
+                </div>
+                <div class="coursesCont">
+                    <p>All Language Courses</p>
+                    <div class="act1" id="allCourse">
+
+                        <div id="majorCourse">
+                            {% for data in result %}
+                            <a href="{% url 'coursePage' %}">
+                                <div>
+                                    <p>{{data.title}} </p>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                        <a href="{% url 'allCourses' %}">
+                            <img src="{% static '/Images/arrow.png' %}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar starts here -->
+        <div id="reqSideBar">
+            <div id="sideBar">
+                <div id="sideBarCont1">
+                    <label>Sidebar</label>
+                    <img onclick="checkit()" src="{% static '/Images/cross.png' %}">
+                </div>
+                <div id="sideBarCont2">
+                    <div onclick="opacDiv()" class="sideOptions" id="sideOption1">
+                        <p>Home</p>
+                    </div>
+                    <div onclick="opacDiv()" class="sideOptions" id="sideOption2">
+                        <a href="{% url 'myCourse' %}">
+                            <p>My Courses</p>
+                        </a>
+                    </div>
+                    <div onclick="opacDiv()" class="sideOptions" id="sideOption3">
+                        <a href="{% url 'profile' %}">
+                            <p>Profile</p>
+                        </a>
+                    </div>
+                    <div onclick="opacDiv()" class="sideOptions" id="sideOption4">
+                        <a href="{% url 'settings' %}">
+                            <p>Settings</p>
+                        </a>
+                    </div>
+                    <div onclick="opacDiv()" class="sideOptions" id="sideOption5">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}">
+                            <p>logout </p>
+                        </a>
+
+                        {% else %}
+                        <a id="beautify" href="{% url 'logAndSign' %}"></a>
+                        <script>
+                            document.getElementById("beautify").click();
+                        </script>
+                        {% endif %}
+                    </div>
+                    <img src="{% static '/Images/app icon.jpeg' %}">
+                </div>
+            </div>
+        </div>
+        <!-- opacityDiv -->
+        <div id="opacDiv">
+
+        </div>
+    </div>
+</body>
+
+</html>
